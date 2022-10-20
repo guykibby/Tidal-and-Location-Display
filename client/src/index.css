@@ -1,10 +1,30 @@
 .tidalData {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(49);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.time {
+  justify-self: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.depth {
+  justify-self: center;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .tableBox {
   border: solid 2px black;
+  width: 10rem;
+  height: 2rem;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  justify-self: center;
+  text-align: center;
 }

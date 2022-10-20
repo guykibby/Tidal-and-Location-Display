@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SignWave from "./SignWave";
+// import SignWave from "./SignWave";
 
 function App2() {
   const [tidalArray, setTidalArray] = useState([["LOADING", "LOADING"]]);
@@ -8,7 +8,7 @@ function App2() {
     const unixDate = Date.now();
     const incOfDay = 48;
     const timeInc = (24 * 60 * 60 * 1000) / incOfDay;
-    let newArray = [["TIME", "HEIGHT"]];
+    let newArray = [];
 
     const fetchData = async (date) => {
       const response = await fetch(
@@ -33,6 +33,8 @@ function App2() {
 
   return (
     <div className="tidalData">
+      <p className="time">Time</p>
+      <p className="depth"> Water Depth</p>
       {tidalArray.flatMap((e, index) => {
         const dateObj = new Date(e[0]);
         const hour = dateObj.getUTCHours();
