@@ -8,10 +8,8 @@ function App2() {
 
   useEffect(() => {
     const unixDate = Date.now();
-
     const incOfDay = 48;
     const timeInc = (24 * 60 * 60 * 1000) / incOfDay;
-    // console.log(timeInc);
     let newArray = [];
 
     const fetchData = async (date) => {
@@ -19,18 +17,20 @@ function App2() {
         `https://rain-mxm.begin.app/water-depth?lat=-36.1&long=174.1&date=${date}`
       );
       const data = await response.json();
-      console.log(data.data.waterDepth);
-      newArray.push(data.data.waterDepth);
+      console.log(data.data);
+      newArray.push([data.data.date, data.data.waterDepth]);
     };
 
-    for (let i = 0; i <= incOfDay; i++) {
-      const incUnixDate = unixDate + timeInc * i;
-      const incIsoDate = new Date(incUnixDate).toISOString();
-      fetchData(incIsoDate);
-    }
-    console.log(newArray);
+    const setData = async () => {
+      for (let i = 0; i <= incOfDay; i++) {
+        const incUnixDate = unixDate + timeInc * i;
+        const incIsoDate = new Date(incUnixDate).toISOString();
+        await fetchData(incIsoDate);
+      }
+      setTidalArray(newArray);
+    };
 
-    setTidalArray(newArray);
+    setData();
   }, []);
 
   return (
