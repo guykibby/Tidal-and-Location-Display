@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SignWave from "./SignWave";
 
 function App2() {
   const [tidalArray, setTidalArray] = useState([["LOADING", "LOADING"]]);
