@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 function App2() {
-  const [tidalArray, setTidalArray] = useState([
-    0, 0.707, 1, 0.707, 0, -0.707, -1, -0.707, 0, 0.707, 1, 0.707, 0, -0.707,
-    -1, -0.707,
-  ]);
+  const [tidalArray, setTidalArray] = useState([["LOADING", "LOADING"]]);
 
   useEffect(() => {
     const unixDate = Date.now();
     const incOfDay = 48;
     const timeInc = (24 * 60 * 60 * 1000) / incOfDay;
-    let newArray = [];
+    let newArray = [["TIME", "HEIGHT"]];
 
     const fetchData = async (date) => {
       const response = await fetch(
@@ -40,8 +37,10 @@ function App2() {
         const hour = dateObj.getUTCHours();
         const minute = dateObj.getUTCMinutes();
         return [
-          <p key={index + 1000}>{`${hour}:${minute}`}</p>,
-          <p key={index}>{e[1]}</p>,
+          <p className="tableBox" key={index + 1000}>{`${hour}:${minute}`}</p>,
+          <p className="tableBox" key={index}>
+            {e[1]}
+          </p>,
         ];
       })}
     </div>

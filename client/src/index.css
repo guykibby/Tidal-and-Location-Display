@@ -1,6 +1,10 @@
 .tidalData {
   display: grid;
-  grid-template-columns: 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   place-items: center;
+}
+
+.tableBox {
+  border: solid 2px black;
 }
