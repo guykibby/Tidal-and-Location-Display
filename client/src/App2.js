@@ -35,9 +35,15 @@ function App2() {
 
   return (
     <div className="tidalData">
-      {tidalArray.map((e, index) => (
-        <p key={index}>{e}</p>
-      ))}
+      {tidalArray.flatMap((e, index) => {
+        const dateObj = new Date(e[0]);
+        const hour = dateObj.getUTCHours();
+        const minute = dateObj.getUTCMinutes();
+        return [
+          <p key={index + 1000}>{`${hour}:${minute}`}</p>,
+          <p key={index}>{e[1]}</p>,
+        ];
+      })}
     </div>
   );
 }

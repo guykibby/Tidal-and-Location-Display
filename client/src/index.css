@@ -1,0 +1,6 @@
+.tidalData {
+  display: grid;
+  grid-template-columns: 2fr;
+  gap: 2rem;
+  place-items: center;
+}

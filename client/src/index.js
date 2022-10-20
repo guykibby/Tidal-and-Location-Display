@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import App1 from "./App1";
 import App2 from "./App2.js";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
