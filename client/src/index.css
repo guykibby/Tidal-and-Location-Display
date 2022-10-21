@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(45deg, #e66465, #9198e5);
+  padding: 2rem;
 }
 
 #root {
@@ -10,6 +11,7 @@ body {
   margin: 4rem auto;
   width: 100%;
   max-width: 70rem;
+  /* padding: 3rem; */
 }
 
 .tidalData {
@@ -59,6 +61,7 @@ body {
 }
 .map {
   border: 1px solid black;
+  /* max-height: 30vw; */
 }
 
 .tidalGrid {

@@ -13,6 +13,7 @@ export default function Home() {
 const containerStyle = {
   width: "100%",
   height: "500px",
+  "max-height": "30vw",
 };
 
 function Map() {
