@@ -1,6 +1,6 @@
 This React app runs on Node JS.
 
-Displays 24hrs of tidal data for Acukland from a remote API, time displayed is GMT.
+Displays 24hrs of tidal data for Auckland from a remote API, time displayed is GMT.
 
 Google maps service plugging.
 
