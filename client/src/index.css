@@ -24,6 +24,7 @@ body {
 
 .depth {
   justify-self: center;
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   color: white;
