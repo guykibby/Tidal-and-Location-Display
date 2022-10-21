@@ -33,6 +33,7 @@ function App2() {
 
   return (
     <body>
+      <SignWave data={tidalArray} />
       <div className="tidalData">
         <p className="time">Time</p>
         <p className="depth"> Water Depth</p>
@@ -58,7 +59,6 @@ function App2() {
           ];
         })}
       </div>
-      <SignWave data={tidalArray} />
     </body>
   );
 }
