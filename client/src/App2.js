@@ -46,12 +46,13 @@ function App2() {
           const dateObj = new Date(e[0]);
           const hour = addZero(dateObj.getUTCHours());
           const minute = addZero(dateObj.getUTCMinutes());
+          const className = ` ${e[1] >= 0.9 ? "danger" : "noDanger"} tableBox`;
           return [
             <p
-              className="tableBox"
+              className={className}
               key={index + 1000}
             >{`${hour}:${minute}`}</p>,
-            <p className="tableBox" key={index}>
+            <p className={className} key={index}>
               {e[1]}
             </p>,
           ];

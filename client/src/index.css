@@ -27,7 +27,6 @@ body {
 .tableBox {
   border: solid 2px black;
   border-radius: 1rem;
-  background: rgb(4, 198, 242);
   font-size: 1rem;
   width: 10rem;
   height: 2rem;
@@ -36,4 +35,13 @@ body {
   padding-right: 5rem;
   justify-self: center;
   text-align: center;
+}
+
+.danger {
+  background: rgb(201, 61, 61);
+  color: white;
+}
+
+.noDanger {
+  background: rgb(4, 198, 242);
 }
