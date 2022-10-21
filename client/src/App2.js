@@ -32,21 +32,32 @@ function App2() {
   }, []);
 
   return (
-    <div className="tidalData">
-      <p className="time">Time</p>
-      <p className="depth"> Water Depth</p>
-      {tidalArray.flatMap((e, index) => {
-        const dateObj = new Date(e[0]);
-        const hour = dateObj.getUTCHours();
-        const minute = dateObj.getUTCMinutes();
-        return [
-          <p className="tableBox" key={index + 1000}>{`${hour}:${minute}`}</p>,
-          <p className="tableBox" key={index}>
-            {e[1]}
-          </p>,
-        ];
-      })}
-    </div>
+    <body>
+      <div className="tidalData">
+        <p className="time">Time</p>
+        <p className="depth"> Water Depth</p>
+        {tidalArray.flatMap((e, index) => {
+          const addZero = (z) => {
+            if (z < 10) {
+              z = "0" + z;
+            }
+            return z;
+          };
+          const dateObj = new Date(e[0]);
+          const hour = addZero(dateObj.getUTCHours());
+          const minute = addZero(dateObj.getUTCMinutes());
+          return [
+            <p
+              className="tableBox"
+              key={index + 1000}
+            >{`${hour}:${minute}`}</p>,
+            <p className="tableBox" key={index}>
+              {e[1]}
+            </p>,
+          ];
+        })}
+      </div>
+    </body>
   );
 }
 

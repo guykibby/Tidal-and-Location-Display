@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(45deg, #e66465, #9198e5);
+}
+
 .tidalData {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -8,18 +12,23 @@
 
 .time {
   justify-self: center;
-  font-size: larger;
+  font-size: 2rem;
   font-weight: bold;
+  color: white;
 }
 
 .depth {
   justify-self: center;
-  font-size: larger;
+  font-size: 2rem;
   font-weight: bold;
+  color: white;
 }
 
 .tableBox {
   border: solid 2px black;
+  border-radius: 1rem;
+  background: rgb(4, 198, 242);
+  font-size: 1rem;
   width: 10rem;
   height: 2rem;
   padding-top: 1rem;
