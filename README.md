@@ -1,8 +1,8 @@
 This React app runs on Node JS.
 
-Displays 24hrs of tidal data for Auckland from a remote API, time displayed is GMT.
+Displays 24hrs of tidal data for Auckland, data collected from a remote mock API.
 
-Google maps service plugging.
+Google maps service pluggin.
 
 Deployed on Render - https://client-d8zq.onrender.com/
 
